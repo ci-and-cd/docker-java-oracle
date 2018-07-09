@@ -1,14 +1,16 @@
-# docker-java
+# docker-java-oracle
 -----
 
-With:
+Oracle Java docker image with locale settings
+
+Features:
 
 - remote debug
 - jmc
 - /opt/ejstatd/ejstatd-1.0.0.jar
 - jmxremote
 - jprofiler agent
-- JAVA_OPTS -Duser.language=zh -Duser.region=CN -Dfile.encoding=UTF-8 -Duser.timezone=Asia/Shanghai
+- JAVA_OPTS -Duser.language=en -Duser.region=US -Dfile.encoding=UTF-8 -Duser.timezone=Etc/UTC
 
 Env variables:
 
@@ -22,25 +24,15 @@ Env variables:
 - SECURITY_USER_NAME
 - SECURITY_USER_PASSWORD
 
-```
-docker-compose -f docker-compose.yml build
-```
+## Java8
+Oracle Java 8 docker image
 
-## java8
-A java 8 docker image
-
-```
-docker build -t cirepo/java:oracle-8u171-jdk-alpine ./java8 -f Dockerfile
-docker save cirepo/java:oracle-8u171-jdk-alpine > ${HOME}/Desktop/oss-java-oracle-8u171-jdk-alpine.tar
-```
+cirepo/java-oracle:8u171_en_US.UTF-8_Etc.UTC
 
 
-## java9
-A java 9 docker image
+## Java9
+Oracle Java 9 docker image
 
-```
-docker build -t cirepo/java:oracle-9.0.4-jdk-alpine ./java9 -f Dockerfile
-docker save cirepo/java:oracle-9.0.4-jdk-alpine > ${HOME}/Desktop/oss-java-oracle-9.0.4-jdk-alpine.tar
-```
+cirepo/java-oracle:9.0.4_en_US.UTF-8_Etc.UTC
 
 see: https://blog.dekstroza.io/building-minimal-docker-containers-with-java-9/

@@ -16,4 +16,4 @@ services:
       #- IMAGE_ARG_JAVA_VERSION=${IMAGE_ARG_JAVA_VERSION:-9.0.4}
       - IMAGE_ARG_TZ_AREA=${IMAGE_ARG_TZ_AREA:-Etc}
       - IMAGE_ARG_TZ_ZONE=${IMAGE_ARG_TZ_ZONE:-UTC}
-    image: ${IMAGE_PREFIX:-cirepo}/${IMAGE_NAME:-java-oracle}:${IMAGE_TAG:-9.0.4-alpine}
+    image: ${IMAGE_PREFIX:-cirepo}/${IMAGE_NAME:-java-oracle}:${IMAGE_TAG:-9.0.4_en_US.UTF-8_Etc.UTC}
