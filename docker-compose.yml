@@ -1,5 +1,7 @@
-version: '3.6'
+
+version: '2.1'
 services:
+  #docker-compose build image
   image:
     build:
       context: .
