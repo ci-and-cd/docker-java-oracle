@@ -1,0 +1,40 @@
+
+FROM cirepo/nix:2.0.4_alpine-3.7
+
+
+ARG IMAGE_ARG_ALPINE_MIRROR
+
+ARG IMAGE_ARG_ENCODING
+#ARG IMAGE_ARG_GLIBC_VERSION
+ARG IMAGE_ARG_LANGUAGE
+ARG IMAGE_ARG_LOCALE
+ARG IMAGE_ARG_REGION
+ARG IMAGE_ARG_JAVA_HOME
+#ARG IMAGE_ARG_JAVA_LD_LIBRARY_PATH
+ARG IMAGE_ARG_JAVA_OPTS
+#ARG IMAGE_ARG_JAVA_VERSION
+ARG IMAGE_ARG_TZ_AREA
+ARG IMAGE_ARG_TZ_ZONE
+
+
+COPY --from=cirepo/alpine-locale:3.7_%IMAGE_ARG_LOCALE%.%IMAGE_ARG_ENCODING%_%IMAGE_ARG_TZ_AREA%.%IMAGE_ARG_TZ_ZONE%-archive /data/root /
+COPY --from=cirepo/waitforit:2.2.0-archive /data/root /
+COPY --from=cirepo/alpine-glibc:3.7_%IMAGE_ARG_GLIBC_VERSION%-archive /data/root /
+COPY --from=cirepo/java-oracle:%IMAGE_ARG_JAVA_VERSION%-archive /data/root /
+COPY --from=cirepo/java-accessories:latest-archive /data/root /
+
+
+#echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf
+
+
+ENV JAVA_HOME ${IMAGE_ARG_JAVA_HOME:-/usr/lib/jvm/java-8-oracle}
+ENV JAVA_OPTS -Duser.language=${IMAGE_ARG_LANGUAGE:-en} -Duser.region=${IMAGE_ARG_REGION:-US} -Dfile.encoding=${IMAGE_ARG_ENCODING:-UTF-8} -Duser.timezone=${IMAGE_ARG_TZ_AREA:-Etc}/${IMAGE_ARG_TZ_ZONE:-UTC} ${IMAGE_ARG_JAVA_OPTS}
+ENV LANG ${IMAGE_ARG_LOCALE:-en_US}.${IMAGE_ARG_ENCODING:-UTF-8}
+ENV LC_ALL ${IMAGE_ARG_LOCALE:-en_US}.${IMAGE_ARG_ENCODING:-UTF-8}
+
+# for java8 (on Java9, it will crash)
+#IMAGE_ARG_JAVA_LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib
+# for java9 (nix Segmentation fault)
+#IMAGE_ARG_JAVA_LD_LIBRARY_PATH=/usr/glibc-compat/lib
+#ENV LD_LIBRARY_PATH ${IMAGE_ARG_JAVA_LD_LIBRARY_PATH:-/lib:/usr/lib:/usr/local/lib}
+ENV PATH ${JAVA_HOME}/bin:${PATH}
