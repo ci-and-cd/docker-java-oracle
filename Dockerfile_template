@@ -17,7 +17,7 @@ ARG IMAGE_ARG_TZ_AREA
 ARG IMAGE_ARG_TZ_ZONE
 
 
-COPY --from=cirepo/alpine-locale:%IMAGE_ARG_LOCALE%.%IMAGE_ARG_ENCODING%_%IMAGE_ARG_TZ_AREA%.%IMAGE_ARG_TZ_ZONE%-alpine-3.7-archive /data/root /
+COPY --from=cirepo/locale:%IMAGE_ARG_LOCALE%.%IMAGE_ARG_ENCODING%_%IMAGE_ARG_TZ_AREA%.%IMAGE_ARG_TZ_ZONE%-alpine-3.7-archive /data/root /
 COPY --from=cirepo/waitforit:2.2.0-archive /data/root /
 COPY --from=cirepo/glibc:%IMAGE_ARG_GLIBC_VERSION%-alpine-3.7-archive /data/root /
 COPY --from=cirepo/java-oracle:%IMAGE_ARG_JAVA_VERSION%-alpine-3.7-archive /data/root /
