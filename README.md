@@ -27,12 +27,12 @@ Env variables:
 ## Java8
 Oracle Java 8 docker image
 
-cirepo/java-oracle:8u171_en_US.UTF-8_Etc.UTC
+cirepo/java-oracle:8u171-en_US.UTF-8_Etc.UTC-alpine
 
 
 ## Java9
 Oracle Java 9 docker image
 
-cirepo/java-oracle:9.0.4_en_US.UTF-8_Etc.UTC
+cirepo/java-oracle:9.0.4-en_US.UTF-8_Etc.UTC-alpine
 
 see: https://blog.dekstroza.io/building-minimal-docker-containers-with-java-9/
