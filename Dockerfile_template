@@ -38,3 +38,20 @@ ENV LC_ALL ${IMAGE_ARG_LOCALE:-en_US}.${IMAGE_ARG_ENCODING:-UTF-8}
 #IMAGE_ARG_JAVA_LD_LIBRARY_PATH=/usr/glibc-compat/lib
 #ENV LD_LIBRARY_PATH ${IMAGE_ARG_JAVA_LD_LIBRARY_PATH:-/lib:/usr/lib:/usr/local/lib}
 ENV PATH ${JAVA_HOME}/bin:${PATH}
+
+
+COPY --chown=alpine:alpine docker /
+
+
+RUN set -ex \
+  && chmod 0755 ${HOME}/*.sh \
+  && mkdir -p ${HOME}/data
+
+
+VOLUME ["${HOME}/data", "/tmp"]
+
+
+USER alpine
+WORKDIR /home/alpine
+ENTRYPOINT ["/home/alpine/entrypoint.sh"]
+CMD []
