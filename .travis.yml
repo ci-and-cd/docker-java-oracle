@@ -16,16 +16,20 @@ env:
   matrix:
   - IMAGE_ARG_ENCODING=UTF-8 IMAGE_ARG_LANGUAGE=en IMAGE_ARG_REGION=US IMAGE_ARG_TZ_AREA=Etc  IMAGE_ARG_TZ_ZONE=UTC      IMAGE_ARG_JAVA_HOME=/usr/lib/jvm/java-8-oracle IMAGE_ARG_JAVA_OPTS=                                                                 IMAGE_ARG_JAVA_VERSION=8u171
   - IMAGE_ARG_ENCODING=UTF-8 IMAGE_ARG_LANGUAGE=en IMAGE_ARG_REGION=US IMAGE_ARG_TZ_AREA=Etc  IMAGE_ARG_TZ_ZONE=UTC      IMAGE_ARG_JAVA_HOME=/usr/lib/jvm/java-9-oracle IMAGE_ARG_JAVA_OPTS="--add-modules java.xml.bind,java.xml.ws,java.xml.ws.annotation" IMAGE_ARG_JAVA_VERSION=9.0.4
+  - IMAGE_ARG_ENCODING=UTF-8 IMAGE_ARG_LANGUAGE=en IMAGE_ARG_REGION=US IMAGE_ARG_TZ_AREA=Etc  IMAGE_ARG_TZ_ZONE=UTC      IMAGE_ARG_JAVA_HOME=/usr/lib/jvm/java-9-oracle IMAGE_ARG_JAVA_OPTS="--add-modules java.xml.bind,java.xml.ws,java.xml.ws.annotation" IMAGE_ARG_JAVA_VERSION=10.0.1
 
   - IMAGE_ARG_ENCODING=UTF-8 IMAGE_ARG_LANGUAGE=en IMAGE_ARG_REGION=US IMAGE_ARG_TZ_AREA=Asia IMAGE_ARG_TZ_ZONE=Shanghai IMAGE_ARG_JAVA_HOME=/usr/lib/jvm/java-8-oracle IMAGE_ARG_JAVA_OPTS=                                                                 IMAGE_ARG_JAVA_VERSION=8u171
   - IMAGE_ARG_ENCODING=UTF-8 IMAGE_ARG_LANGUAGE=en IMAGE_ARG_REGION=US IMAGE_ARG_TZ_AREA=Asia IMAGE_ARG_TZ_ZONE=Shanghai IMAGE_ARG_JAVA_HOME=/usr/lib/jvm/java-9-oracle IMAGE_ARG_JAVA_OPTS="--add-modules java.xml.bind,java.xml.ws,java.xml.ws.annotation" IMAGE_ARG_JAVA_VERSION=9.0.4
+  - IMAGE_ARG_ENCODING=UTF-8 IMAGE_ARG_LANGUAGE=en IMAGE_ARG_REGION=US IMAGE_ARG_TZ_AREA=Asia IMAGE_ARG_TZ_ZONE=Shanghai IMAGE_ARG_JAVA_HOME=/usr/lib/jvm/java-9-oracle IMAGE_ARG_JAVA_OPTS="--add-modules java.xml.bind,java.xml.ws,java.xml.ws.annotation" IMAGE_ARG_JAVA_VERSION=10.0.1
 
 
   - IMAGE_ARG_ENCODING=UTF-8 IMAGE_ARG_LANGUAGE=zh IMAGE_ARG_REGION=CN IMAGE_ARG_TZ_AREA=Etc  IMAGE_ARG_TZ_ZONE=UTC      IMAGE_ARG_JAVA_HOME=/usr/lib/jvm/java-8-oracle IMAGE_ARG_JAVA_OPTS=                                                                 IMAGE_ARG_JAVA_VERSION=8u171
   - IMAGE_ARG_ENCODING=UTF-8 IMAGE_ARG_LANGUAGE=zh IMAGE_ARG_REGION=CN IMAGE_ARG_TZ_AREA=Etc  IMAGE_ARG_TZ_ZONE=UTC      IMAGE_ARG_JAVA_HOME=/usr/lib/jvm/java-9-oracle IMAGE_ARG_JAVA_OPTS="--add-modules java.xml.bind,java.xml.ws,java.xml.ws.annotation" IMAGE_ARG_JAVA_VERSION=9.0.4
+  - IMAGE_ARG_ENCODING=UTF-8 IMAGE_ARG_LANGUAGE=zh IMAGE_ARG_REGION=CN IMAGE_ARG_TZ_AREA=Etc  IMAGE_ARG_TZ_ZONE=UTC      IMAGE_ARG_JAVA_HOME=/usr/lib/jvm/java-9-oracle IMAGE_ARG_JAVA_OPTS="--add-modules java.xml.bind,java.xml.ws,java.xml.ws.annotation" IMAGE_ARG_JAVA_VERSION=10.0.1
 
   - IMAGE_ARG_ENCODING=UTF-8 IMAGE_ARG_LANGUAGE=zh IMAGE_ARG_REGION=CN IMAGE_ARG_TZ_AREA=Asia IMAGE_ARG_TZ_ZONE=Shanghai IMAGE_ARG_JAVA_HOME=/usr/lib/jvm/java-8-oracle IMAGE_ARG_JAVA_OPTS=                                                                 IMAGE_ARG_JAVA_VERSION=8u171
   - IMAGE_ARG_ENCODING=UTF-8 IMAGE_ARG_LANGUAGE=zh IMAGE_ARG_REGION=CN IMAGE_ARG_TZ_AREA=Asia IMAGE_ARG_TZ_ZONE=Shanghai IMAGE_ARG_JAVA_HOME=/usr/lib/jvm/java-9-oracle IMAGE_ARG_JAVA_OPTS="--add-modules java.xml.bind,java.xml.ws,java.xml.ws.annotation" IMAGE_ARG_JAVA_VERSION=9.0.4
+  - IMAGE_ARG_ENCODING=UTF-8 IMAGE_ARG_LANGUAGE=zh IMAGE_ARG_REGION=CN IMAGE_ARG_TZ_AREA=Asia IMAGE_ARG_TZ_ZONE=Shanghai IMAGE_ARG_JAVA_HOME=/usr/lib/jvm/java-9-oracle IMAGE_ARG_JAVA_OPTS="--add-modules java.xml.bind,java.xml.ws,java.xml.ws.annotation" IMAGE_ARG_JAVA_VERSION=10.0.1
 
 group: edge
 #install: true
