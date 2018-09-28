@@ -27,7 +27,7 @@ Env variables:
 ## Java8
 Oracle Java 8 docker image
 
-cirepo/java-oracle:8u171-en_US.UTF-8_Etc.UTC-alpine
+cirepo/java-oracle:8u181-en_US.UTF-8_Etc.UTC-alpine
 
 
 ## Java9
