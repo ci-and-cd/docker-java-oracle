@@ -20,4 +20,4 @@ services:
       #- IMAGE_ARG_TZ=${IMAGE_ARG_TZ:-UTC+8:00}
       - IMAGE_ARG_TZ_AREA=${IMAGE_ARG_TZ_AREA:-Etc}
       - IMAGE_ARG_TZ_ZONE=${IMAGE_ARG_TZ_ZONE:-UTC}
-    image: ${IMAGE_PREFIX:-cirepo}/${IMAGE_NAME:-java-oracle}:${IMAGE_TAG:-9.0.4-en_US.UTF-8_Etc.UTC-alpine}
+    image: ${IMAGE_PREFIX:-cirepo/}${IMAGE_NAME:-java-oracle}:${IMAGE_TAG:-9.0.4-en_US.UTF-8_Etc.UTC-alpine}
